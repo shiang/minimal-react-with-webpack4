@@ -3,6 +3,7 @@ const { GenerateSW } = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  mode: 'production',
   entry: ["react-hot-loader/patch", "./src/index.js"],
   devtool: "source-map",
   module: {
@@ -14,17 +15,35 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-          use: [{
-              loader: "style-loader"
-          }, {
-              loader: "css-loader", options: {
-                  sourceMap: true
-              }
-          }, {
-              loader: "sass-loader", options: {
-                  sourceMap: true
-              }
-          }]
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+              outputPath: "images/",
+            }
+          }
+        ]
       }
     ]
   },
