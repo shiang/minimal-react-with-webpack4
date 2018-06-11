@@ -13,6 +13,6 @@
 
 ## Special thanks to
 
-- (this guide)[https://www.robinwieruch.de/minimal-react-webpack-babel-setup/]
-- (and this guide)[https://ranjithnair.github.io/2018/04/30/workbox-react.html]
-- And of course the (webpack documentation)[https://webpack.js.org/concepts/]
+- [this guide](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
+- [and this guide](https://ranjithnair.github.io/2018/04/30/workbox-react.html)
+- And of course the [webpack documentation](https://webpack.js.org/concepts/)
